@@ -1,0 +1,135 @@
+/**
+ * Make body at least 100% height
+ * You can also use a combination
+ * of height: 100% in <html> and
+ * min-height: 100% in <body>.
+ */
+ .holy-grail {
+	min-height: 100vh;
+}
+
+/**
+ * Let's do a column distribution
+ * (mobile first)
+ * flex value is 1 1 auto to make
+ * body skrinkable and extensible
+ */
+.holy-grail,
+.holy-grail-body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+/**
+ * Content body item is made
+ * extensible too.
+ */
+.holy-grail-content {
+	flex: 1 1 auto;
+}
+
+/**
+ * Put the first sidebar before content.
+ * If you need sidebar to be before content
+ * only in big screen put those 3 next lines
+ * in @media block.
+ */
+.holy-grail-sidebar-1 {
+	order: -1;
+}
+
+.jumbotron-fluid{
+    height: 100em ;
+    background-image: url(images/buildings.jpg);
+
+}
+
+div.nav{
+    height:3em;
+    background-color: black;
+    align-items: center;
+   justify-content: left;
+   
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+
+  li{
+    display: inline;
+    padding-left: 2em;
+  }
+
+  div.nav ul li a{
+      color:white;
+  }
+
+  #overlay {
+    
+
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+
+    background-color: rgba(0, 0, 0, .6); /* Black background with opacity */
+    /*z-index: 2; Specify a stack order in case you're using a different order for other elements */
+  }
+
+  #overlaytext{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+
+    text-align: center;
+  }
+
+  #overlaytext button{
+      background-color: black;
+      color: white;
+      border-radius:4px;
+
+      height: auto;
+      width: auto;
+
+      border: none;
+
+      font-size: 40%;
+
+      padding: 7px 20px;
+      
+  }
+
+  #overlaytext button:hover{ 
+    border: 1px solid white;
+  }
+
+/**
+ * Let's introduce bigger screen
+ */
+
+
+@media (min-width: 768px) {
+	/**
+	 * Body items are now side by side
+	 */
+	.holy-grail-body {
+		flex-direction: row;
+	}
+
+	/**
+	 * Sidebars have a basic 260 width
+	 * and are not really flexible anymore
+	 */
+	.hg-sidebar {
+		flex: 0 0 260px;
+	}
+}
