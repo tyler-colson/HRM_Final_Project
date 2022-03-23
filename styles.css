@@ -1,47 +1,31 @@
-/**
- * Make body at least 100% height
- * You can also use a combination
- * of height: 100% in <html> and
- * min-height: 100% in <body>.
- */
- .holy-grail {
-	min-height: 100vh;
-}
-
-/**
- * Let's do a column distribution
- * (mobile first)
- * flex value is 1 1 auto to make
- * body skrinkable and extensible
- */
-.holy-grail,
-.holy-grail-body {
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: column;
-}
-
-/**
- * Content body item is made
- * extensible too.
- */
-.holy-grail-content {
-	flex: 1 1 auto;
-}
-
-/**
- * Put the first sidebar before content.
- * If you need sidebar to be before content
- * only in big screen put those 3 next lines
- * in @media block.
- */
-.holy-grail-sidebar-1 {
-	order: -1;
-}
-
 .jumbotron-fluid{
     height: 100em ;
+    background-size: cover;
+    
+
+}
+
+.homeJumbo{
     background-image: url(images/buildings.jpg);
+
+    
+}
+
+.investingJumbo{
+    background-image: url(images/investingjumbo.jpg);
+    height: 33em;
+
+}
+
+.creditJumbo{
+    background-image: url(images/creditjumbo.jpg);
+    height: 33em;
+
+}
+
+.loansJumbo{
+    background-image: url(images/loansjumbo.jpg);
+    height: 33em;
 
 }
 
@@ -50,6 +34,8 @@ div.nav{
     background-color: black;
     align-items: center;
    justify-content: left;
+
+   position: fixed;
    
 }
 
@@ -64,6 +50,10 @@ ul {
   li{
     display: inline;
     padding-left: 2em;
+  }
+
+  div ul li{
+      display: inline-block;
   }
 
   div.nav ul li a{
@@ -82,7 +72,7 @@ ul {
 
   #overlaytext{
     position: absolute;
-    top: 35%;
+    top: 33%;
     left: 50%;
     font-size: 50px;
     color: white;
@@ -92,7 +82,7 @@ ul {
     text-align: center;
   }
 
-  #overlaytext button{
+  #overlaytext a{
       background-color: black;
       color: white;
       border-radius:4px;
@@ -105,12 +95,26 @@ ul {
       font-size: 40%;
 
       padding: 7px 20px;
+
+      text-decoration: none;
       
   }
 
-  #overlaytext button:hover{ 
+  #overlaytext a:hover{ 
     border: 1px solid white;
   }
+
+  #overlaytext h1{
+      font-size: 1.1em;
+
+  }
+
+
+  footer{
+      padding:20px;
+      background-color: black;
+  }
+
 
 /**
  * Let's introduce bigger screen
@@ -118,18 +122,5 @@ ul {
 
 
 @media (min-width: 768px) {
-	/**
-	 * Body items are now side by side
-	 */
-	.holy-grail-body {
-		flex-direction: row;
-	}
 
-	/**
-	 * Sidebars have a basic 260 width
-	 * and are not really flexible anymore
-	 */
-	.hg-sidebar {
-		flex: 0 0 260px;
-	}
 }
