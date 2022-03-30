@@ -160,9 +160,14 @@ ul {
       float: right;
       display: block;
     }
+
     #overlaytext{
         position: relative;
-        top: 15%;
+        top: 35%;
+    }
+
+    .overlayHome{
+        top:15% !important;
     }
   }
   
@@ -218,6 +223,15 @@ ul {
 .creditTips{
     flex-direction:column;
 
+}
+
+.loansList{
+    flex-wrap:wrap;
+}
+
+.loansIcons{
+    
+    
 }
 
 
